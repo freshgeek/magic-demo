@@ -1,0 +1,24 @@
+server:
+  port: 80
+logging:
+  level:
+    com: debug
+
+
+#h2配置
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:h2:mem:dbtest
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+    platform: h2
+  h2:
+    console:
+      path: /h2
+      settings:
+        web-allow-others: true
